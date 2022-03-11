@@ -25,6 +25,7 @@ const BtnContainer = styled.div`
     width: 100%;
     max-width: 120px;
     margin: 20px;
+    
 `;
 
 const BtnBorder = styled.div`
@@ -53,4 +54,18 @@ const BtnBorder = styled.div`
         background-color:rgba(156, 13, 24, 0.8)
     }
 
+
+    @media only screen and (max-width : 970px) {
+       
+        & {
+            width: 60px;
+            height: 60px;
+            
+        }
+
+        img {
+        max-width: 40px;
+         padding: 2px;
+    }
+    }
 `;

@@ -22,14 +22,21 @@
 .skill-container>h1 {
     padding-top: 50px;
     color: white;
-    
+
 }
 
 
 @media only screen and (max-width : 970px) {
     .skill-container {
-        height: 200px;
+        height: 800px;
         width: 100%;
+    }
+
+    .skill {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.5rem;
+        margin-left: 1em;
     }
 
     .skill>h1 {
