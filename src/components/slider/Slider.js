@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import './Slider.css'
 import videogamesgif from '../../utils/VIDEOGAMES.gif'
 import fleetimg from '../../utils/FLEET.jpg'
+import logiexpressimg from '../../utils/LOGIEXPRESS.jpg'
 import Modal from '../modal/Modal';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
@@ -33,7 +34,7 @@ const Slider = () => {
       modal: setModalFleet
     },
     {
-      src: 'https://cdn.pixabay.com/photo/2015/02/05/08/06/macbook-624707_960_720.jpg',
+      src: logiexpressimg,
       alt: 'Logiexpress',
       desc: 'Logiexpress',
       tecn: 'React Native / Typescript',
