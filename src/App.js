@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Cover from '../src/components/cover/Cover.js'
+import NavBar from '../src/components/navbar/Navbar.js'
+import About from './components/about/About';
+import Slider from './components/slider/Slider.js';
+import Info from './components/info/Info';
+import Footer from './components/footer/Footer';
+import Skills from './components/skills/Skills';
+import Modal from './components/modal/Modal';
+import styled from 'styled-components';
+
+
+
 
 function App() {
+
+
+  const [ modalView, setModalView ] = useState(false)
+
+  const [scrollHeight, setScrollHeight] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollHeight(position)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+  }, [scrollHeight])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar isScrolling={scrollHeight} />
+      <Cover />
+      <About />
+      <Slider />
+      <Info />
+      <Skills />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.btn-container {
+    flex: 1;
+    width: 100%;
+    max-width: 120px;
+    margin: 20px;
+}
+
+.btn-container .btn-border {
+    width: 140px;
+    border-radius: 8px;
+    height: 120px;
+    box-shadow: 0 2px 2px rgba(213, 9, 9, 0.788);
+    text-align: center;
+    transition: all 0.25s;
+    background:rgba(181, 56, 56, 0.1);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-container .btn-border > img {
+    max-width: 50px;
+    padding: 2px;
+}
