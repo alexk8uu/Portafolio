@@ -46,7 +46,7 @@ const Slider = () => {
     <div className='carousel-container'>
       <div className='carousel-title'>
         <div className='tittle-line'>
-        <h2>Mis Proyectos</h2>
+          <h2>Mis Proyectos</h2>
         </div>
       </div>
       <Carousel
@@ -78,11 +78,10 @@ const Slider = () => {
         title={'Videogames'}
         github={'https://github.com/alexk8uu/Proyect-VideoGames-Henry'}
       >
-        <Container>
-         <ResponsiblePlayer
-         url='https://www.youtube.com/watch?v=BrE_VPyweVs'
-         />
-        </Container>
+        <ResponsiblePlayer
+        url={'https://www.youtube.com/watch?v=BrE_VPyweVs'}
+        />
+       
       </Modal>
       <Modal
         modal={modalFleet}
@@ -90,13 +89,9 @@ const Slider = () => {
         title={'Fleet'}
         github={'https://github.com/LOGIEXPRESS/Fleet'}
       >
-        <Container>
-        <ReactPlayer
-          
-          url='https://www.youtube.com/watch?v=ABfLEvydm44'
-          controls
-          />
-        </Container>
+        <ResponsiblePlayer
+        url={'https://www.youtube.com/watch?v=ABfLEvydm44'}
+        />
       </Modal>
       <Modal
         modal={modalLogiexpress}
@@ -104,14 +99,9 @@ const Slider = () => {
         title={'Logiexpress'}
         github={'https://github.com/LOGIEXPRESS/LOGIEXPRESS'}
       >
-        <Container>
-        <ReactPlayer 
-          url='https://www.youtube.com/watch?v=zTitoHKsyJg'
-          controls
-
-          />
-       
-        </Container>
+      <ResponsiblePlayer
+      url={'https://www.youtube.com/watch?v=zTitoHKsyJg'}
+      />
       </Modal>
     </div>
   )
@@ -120,24 +110,39 @@ const Slider = () => {
 export default Slider;
 
 
+
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   h1 {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 10px;
   }
-
+  
   p {
     color: aqua ;
   }
-
+  
   @media only screen and ( max-width : 960px ) {
     
-  
+    
   }
+  
+  `;
 
-`;
+
+  const PlayerWraper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0
+  }
+  `

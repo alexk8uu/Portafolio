@@ -12,7 +12,8 @@ const ResponsiblePlayer = ({url}) => {
         className='react-player'
         url={url}
         controls
-        
+        width="100%"
+        height="100%"
         />
     </div>
   )
