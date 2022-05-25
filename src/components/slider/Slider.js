@@ -8,11 +8,11 @@ import logiexpressimg from '../../utils/LOGIEXPRESS.jpg'
 import Modal from '../modal/Modal';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
-
+import ResponsiblePlayer from './ResponsiblePlayer';
 
 const Slider = () => {
 
-
+  let factor = 0.3;
 
   const [modalVideogame, setModalVideogame] = useState(false);
   const [modalFleet, setModalFleet] = useState(false);
@@ -79,10 +79,9 @@ const Slider = () => {
         github={'https://github.com/alexk8uu/Proyect-VideoGames-Henry'}
       >
         <Container>
-          <ReactPlayer 
-          url='https://www.youtube.com/watch?v=BrE_VPyweVs'
-          controls
-          />
+         <ResponsiblePlayer
+         url='https://www.youtube.com/watch?v=BrE_VPyweVs'
+         />
         </Container>
       </Modal>
       <Modal
@@ -92,7 +91,8 @@ const Slider = () => {
         github={'https://github.com/LOGIEXPRESS/Fleet'}
       >
         <Container>
-        <ReactPlayer 
+        <ReactPlayer
+          
           url='https://www.youtube.com/watch?v=ABfLEvydm44'
           controls
           />
@@ -108,6 +108,7 @@ const Slider = () => {
         <ReactPlayer 
           url='https://www.youtube.com/watch?v=zTitoHKsyJg'
           controls
+
           />
        
         </Container>
@@ -132,6 +133,11 @@ const Container = styled.div`
 
   p {
     color: aqua ;
+  }
+
+  @media only screen and ( max-width : 960px ) {
+    
+  
   }
 
 `;

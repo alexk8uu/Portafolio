@@ -50,6 +50,13 @@ const ModalContainer = styled.div`
     box-shadow: rgba(100,100,110, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     margin-top: 50px;
+
+
+    @media only screen and ( max-width : 960px ) {
+        width: 300px;
+        max-height: 350px;   
+    }
+
 `;
 
 const Overlay = styled.div`
