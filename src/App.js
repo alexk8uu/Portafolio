@@ -7,8 +7,9 @@ import Slider from './components/slider/Slider.js';
 import Info from './components/info/Info';
 import Footer from './components/footer/Footer';
 import Skills from './components/skills/Skills';
-import Modal from './components/modal/Modal';
-import styled from 'styled-components';
+/* import Modal from './components/modal/Modal';
+import styled from 'styled-components'; */
+
 
 
 
@@ -16,7 +17,7 @@ import styled from 'styled-components';
 function App() {
 
 
-  const [ modalView, setModalView ] = useState(false)
+  /* const [ modalView, setModalView ] = useState(false) */
 
   const [scrollHeight, setScrollHeight] = useState(0);
 
