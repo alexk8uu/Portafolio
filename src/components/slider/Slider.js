@@ -9,6 +9,16 @@ import Modal from '../modal/Modal';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 import ResponsiblePlayer from './ResponsiblePlayer';
+import image2 from '../../utils/2.png';
+import image3 from '../../utils/3.png';
+import image4 from '../../utils/4.png';
+import image5 from '../../utils/5.png';
+import image6 from '../../utils/6.png';
+import image7 from '../../utils/7.png';
+import image8 from '../../utils/8.png';
+import image9 from '../../utils/9.png';
+
+
 
 const Slider = () => {
 
@@ -17,6 +27,55 @@ const Slider = () => {
   const [modalVideogame, setModalVideogame] = useState(false);
   const [modalFleet, setModalFleet] = useState(false);
   const [modalLogiexpress, setModalLogiexpress] = useState(false);
+
+
+  const logiexpressImg = [
+    {
+      src: image2,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image3,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image2,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image4,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image5,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image6,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image7,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image8,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+    {
+      src: image9,
+      alt: 'Logiexpress App',
+      desc: 'Logiexpress App',
+    },
+  ]
 
   const slidesInfo = [
     {
@@ -79,9 +138,9 @@ const Slider = () => {
         github={'https://github.com/alexk8uu/Proyect-VideoGames-Henry'}
       >
         <ResponsiblePlayer
-        url={'https://www.youtube.com/watch?v=BrE_VPyweVs'}
+          url={'https://www.youtube.com/watch?v=BrE_VPyweVs'}
         />
-       
+
       </Modal>
       <Modal
         modal={modalFleet}
@@ -90,7 +149,7 @@ const Slider = () => {
         github={'https://github.com/LOGIEXPRESS/Fleet'}
       >
         <ResponsiblePlayer
-        url={'https://www.youtube.com/watch?v=ABfLEvydm44'}
+          url={'https://www.youtube.com/watch?v=ABfLEvydm44'}
         />
       </Modal>
       <Modal
@@ -99,9 +158,15 @@ const Slider = () => {
         title={'Logiexpress'}
         github={'https://github.com/LOGIEXPRESS/LOGIEXPRESS'}
       >
-      <ResponsiblePlayer
-      url={'https://www.youtube.com/watch?v=zTitoHKsyJg'}
-      />
+     
+          {
+            logiexpressImg.map(slide => (
+              <div className="logiexpress-container">
+                <img src={slide.src} alt={slide.alt} />
+              </div>
+            ))
+          }
+       
       </Modal>
     </div>
   )
@@ -111,38 +176,3 @@ export default Slider;
 
 
 
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    color: aqua ;
-  }
-  
-  @media only screen and ( max-width : 960px ) {
-    
-    
-  }
-  
-  `;
-
-
-  const PlayerWraper = styled.div`
-  position: relative;
-  padding-top: 56.25%;
-
-
-  .react-player {
-    position: absolute;
-    top: 0;
-    left: 0
-  }
-  `
