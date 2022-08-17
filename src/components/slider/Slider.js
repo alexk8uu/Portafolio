@@ -6,8 +6,6 @@ import videogamesgif from "../../utils/VIDEOGAMES.gif";
 import fleetimg from "../../utils/FLEET.jpg";
 import logiexpressimg from "../../utils/LOGIEXPRESS.jpg";
 import Modal from "../modal/Modal";
-import styled from "styled-components";
-import ReactPlayer from "react-player";
 import ResponsiblePlayer from "./ResponsiblePlayer";
 import image2 from "../../utils/2.png";
 import image3 from "../../utils/3.png";
@@ -17,10 +15,11 @@ import image6 from "../../utils/6.png";
 import image7 from "../../utils/7.png";
 import image8 from "../../utils/8.png";
 import image9 from "../../utils/9.png";
+import eCommerceImg from '../../utils/E-commerceMagdalena.jpg'
 
 const Slider = () => {
-  let factor = 0.3;
 
+  const [modalEcommerce, setModalEcommerce] = useState(false);
   const [modalVideogame, setModalVideogame] = useState(false);
   const [modalFleet, setModalFleet] = useState(false);
   const [modalLogiexpress, setModalLogiexpress] = useState(false);
@@ -95,6 +94,14 @@ const Slider = () => {
       tecn: "React Native / Typescript",
       modal: setModalLogiexpress,
     },
+    {
+      src: eCommerceImg,
+      alt: "E-Commerce Magdalena",
+      desc: "E-Comemerce Magdalena",
+      tecn: "React / Redux / MongoDb / Styled-components",
+      modal: setModalEcommerce,
+    },
+
   ];
 
   return (
@@ -142,6 +149,16 @@ const Slider = () => {
       >
         <ResponsiblePlayer
           url={"https://www.youtube.com/watch?v=ABfLEvydm44"}
+        />
+      </Modal>
+      <Modal
+        modal={modalEcommerce}
+        setModal={setModalEcommerce}
+        title={"E-Commerce Magdalena"}
+        github={"https://github.com/alexk8uu/Magdalena-Ecommerce"}
+      >
+        <ResponsiblePlayer
+          url={"https://youtu.be/r0nt2kX5u4U"}
         />
       </Modal>
       <Modal
